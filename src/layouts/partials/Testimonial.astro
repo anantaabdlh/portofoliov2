@@ -13,67 +13,56 @@ const { testimonial } = Astro.props;
 
 
 {
-  testimonial.data.enable && (
+    testimonial.data.enable && (
       <section class="section">
-        <div class="container ">
-          <div class="row ">
+        <div class="container">
+          <div class="row">
             <div class="mx-auto mb-12 text-center md:col-10 lg:col-8 xl:col-6">
-              <h2 set:html={markdownify(testimonial.data.title)} class=" mb-4" />
+              <h2 set:html={markdownify(testimonial.data.title)} class="mb-4" />
               <p set:html={markdownify(testimonial.data.description)} />
-              <div class=" flex justify-center items-center mt-12 ">
-                <div class="gap-1  flex border border-[#FFD700] rounded-lg px-2 py-2">
-                  <button class="hover:bg-[#355e87] hover:text-white rounded-lg px-10 py-2 ">
-                      Mainnet
+              <div class="flex justify-center items-center mt-12">
+                <div class="gap-1 flex border border-[#FFD700] rounded-lg px-2 py-2">
+                  <button class="hover:bg-[#355e87] hover:text-white rounded-lg px-10 py-2">
+                    Mainnet
                   </button>
                   <button class="hover:bg-[#cf3f17] hover:text-white rounded-lg px-10 py-2">
-                      Testnet
+                    Testnet
                   </button>
                   <button class="hover:bg-[#f21353] hover:text-white rounded-lg px-10 py-2">
-                      Archive
+                    Archive
                   </button>
                 </div>
               </div>
             </div>
-            <div class="col-12 ">
-              <div class="swiper testimonial-slider ">
-                <div class="swiper-wrapper flex flex-wrap gap-10">
-                  {testimonial.data.testimonials.map(
-                    (item: {
-                      avatar: string;
-                      content: string;
-                      name: string;
-                      based:string;
-                    }) => (
-                      <div class="swiper-slide">
-                        <div class="max-w-sm  rounded-lg border border-[#525252] bg-theme-light  px-[67px] py-4 dark:bg-darkmode-hitam dark:hover:bg-darkmode-blue ">
-                          <div class="flex justify-center items-center">
-                            <div class="text-dark dark:text-white ">
-                                <ImageMod
-                                  height={100}
-                                  width={100}
-                                  class="rounded-full"
-                                  src={item.avatar}
-                                  alt={item.name}
-                                  format="webp"
-                                />
-                            </div>
+            <div class="col-12">
+              <div class="swiper testimonial-slider">
+                <div class="swiper-wrapper flex flex-wrap gap-10 justify-center">
+                  {testimonial.data.testimonials.map((item: { avatar: string; content: string; name: string; based: string; }) => (
+                    <div class="swiper-slide">
+                      <div class="max-w-sm rounded-lg border border-[#525252] bg-theme-light px-[30px] py-4 dark:bg-darkmode-hitam dark:hover:bg-darkmode-blue">
+                        <div class="flex justify-center items-center">
+                          <div class="text-dark dark:text-white">
+                            <ImageMod
+                              height={80}
+                              width={80}
+                              class="rounded-full"
+                              src={item.avatar}
+                              alt={item.name}
+                              format="webp"
+                            />
                           </div>
-                          <p
-                            class="mt-8 text-2xl text-center font-semibold	"
-                            set:html={markdownify(item.content)}
-                          />
-                          <div class="mt-11 ">
-                            <div class="ml-4 flex justify-center items-center">
-                              <button class="rounded-lg border border-[#ffff] bg-[#1f1f1f] px-12 py-2 text-white dark:text-white hover:bg-[#423e3e]"
-                              >
+                        </div>
+                        <p class="mt-8 text-2xl text-center font-semibold" set:html={markdownify(item.content)} />
+                        <div class="mt-11">
+                          <div class="flex justify-center items-center">
+                            <button class="rounded-lg border border-[#ffff] bg-[#1f1f1f] px-12 py-1 text-white dark:text-white hover:bg-[#423e3e]">
                               Stake
-                              </button>
-                            </div>
+                            </button>
                           </div>
                         </div>
                       </div>
-                    ),
-                  )}
+                    </div>
+                  ))}
                 </div>
                 <div class="testimonial-slider-pagination mt-9 flex items-center justify-center text-center" />
               </div>
@@ -81,5 +70,5 @@ const { testimonial } = Astro.props;
           </div>
         </div>
       </section>
-  )
-}
+    )
+  }
