@@ -3,55 +3,21 @@ enable: true
 title: "Supported Networks"
 description: ""
 
-# Mainnet
 testimonials:
 - name: "Band"
   content: "Band Protocol"
-  based: "Mainnet"
+  based: Mainnet
   avatar: "/images/bands.png"
 
-- name: "Band"
+
+- name: "Band Protocol"
   content: "Band Protocol"
-  based: "Testnet"
+  based: Testnet
   avatar: "/images/bands.png"
 
-- name: "Band"
-  content: "Band Protocol"
-  based: "Testnet"
-  avatar: "/images/bands.png"
 
-- name: "Band"
+- name: "Band Protocol"
   content: "Band Protocol"
-  based: "Testnet"
-  avatar: "/images/bands.png"
-
-- name: "Band"
-  content: "Band Protocol"
-  based: "Testnet"
-  avatar: "/images/bands.png"
-
-- name: "Band"
-  content: "Band Protocol"
-  based: "Testnet"
-  avatar: "/images/bands.png"
-
-- name: "Band"
-  content: "Band Protocol"
-  based: "Testnet"
-  avatar: "/images/bands.png"
-  
-- name: "Band"
-  content: "Band Protocol"
-  based: "Testnet"
-  avatar: "/images/bands.png"
-
-- name: "Band"
-  content: "Band Protocol"
-  based: "Testnet"
-  avatar: "/images/bands.png"
-
-- name: "Band"
-  content: "Band Protocol"
-  based: "Testnet"
+  based: Archive
   avatar: "/images/bands.png"
 ---
