@@ -1,7 +1,7 @@
 {
   "site": {
     "title": "MapleSyrup",
-    "base_url": "MapleSyrup-node.xyz",
+    "base_url": "https://astroplate.netlify.app",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
@@ -41,7 +41,7 @@
 
   "metadata": {
     "meta_author": "zeon.studio",
-    "meta_image": "/images/logo_MS.png",
-    "meta_description": "Staking PoS Validator"
+    "meta_image": "/images/og-image.png",
+    "meta_description": "astro and tailwind boilerplate"
   }
 }
